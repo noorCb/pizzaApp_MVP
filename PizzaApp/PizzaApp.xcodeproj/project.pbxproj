@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		C90EC19929E4145B00006B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC19829E4145B00006B47 /* AppDelegate.swift */; };
 		C90EC19B29E4145B00006B47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC19A29E4145B00006B47 /* SceneDelegate.swift */; };
-		C90EC19D29E4145B00006B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC19C29E4145B00006B47 /* ViewController.swift */; };
+		C90EC19D29E4145B00006B47 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC19C29E4145B00006B47 /* MainViewController.swift */; };
 		C90EC1A029E4145B00006B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90EC19E29E4145B00006B47 /* Main.storyboard */; };
 		C90EC1A229E4146200006B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C90EC1A129E4146200006B47 /* Assets.xcassets */; };
 		C90EC1A529E4146200006B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90EC1A329E4146200006B47 /* LaunchScreen.storyboard */; };
 		C90EC1B029E4146300006B47 /* PizzaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC1AF29E4146300006B47 /* PizzaAppTests.swift */; };
 		C90EC1BB29E4146300006B47 /* PizzaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC1BA29E4146300006B47 /* PizzaAppUITests.swift */; };
+		C90EC1CD29E422BB00006B47 /* PizzaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90EC1CC29E422BB00006B47 /* PizzaCell.xib */; };
+		C90EC1D029E4235B00006B47 /* PizzaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC1CF29E4235B00006B47 /* PizzaCell.swift */; };
+		C90EC1D429E42CBE00006B47 /* DrawerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90EC1D329E42CBE00006B47 /* DrawerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		C90EC19529E4145B00006B47 /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90EC19829E4145B00006B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C90EC19A29E4145B00006B47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C90EC19C29E4145B00006B47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C90EC19C29E4145B00006B47 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C90EC19F29E4145B00006B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C90EC1A129E4146200006B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C90EC1A429E4146200006B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		C90EC1B629E4146300006B47 /* PizzaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90EC1BA29E4146300006B47 /* PizzaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaAppUITests.swift; sourceTree = "<group>"; };
 		C90EC1BC29E4146300006B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C90EC1CC29E422BB00006B47 /* PizzaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaCell.xib; sourceTree = "<group>"; };
+		C90EC1CF29E4235B00006B47 /* PizzaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaCell.swift; sourceTree = "<group>"; };
+		C90EC1D329E42CBE00006B47 /* DrawerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,14 @@
 		C90EC19729E4145B00006B47 /* PizzaApp */ = {
 			isa = PBXGroup;
 			children = (
+				C90EC1D129E42C9200006B47 /* Utils */,
+				C90EC1CB29E41BD500006B47 /* Model */,
+				C90EC1CA29E41BD100006B47 /* View */,
+				C90EC1C829E41BBC00006B47 /* Presenter */,
 				C90EC19829E4145B00006B47 /* AppDelegate.swift */,
 				C90EC19A29E4145B00006B47 /* SceneDelegate.swift */,
-				C90EC19C29E4145B00006B47 /* ViewController.swift */,
-				C90EC19E29E4145B00006B47 /* Main.storyboard */,
 				C90EC1A129E4146200006B47 /* Assets.xcassets */,
+				C90EC19E29E4145B00006B47 /* Main.storyboard */,
 				C90EC1A329E4146200006B47 /* LaunchScreen.storyboard */,
 				C90EC1A629E4146200006B47 /* Info.plist */,
 			);
@@ -126,6 +135,54 @@
 				C90EC1BC29E4146300006B47 /* Info.plist */,
 			);
 			path = PizzaAppUITests;
+			sourceTree = "<group>";
+		};
+		C90EC1C829E41BBC00006B47 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C90EC1CA29E41BD100006B47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C90EC19C29E4145B00006B47 /* MainViewController.swift */,
+				C90EC1CE29E4234400006B47 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C90EC1CB29E41BD500006B47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C90EC1CE29E4234400006B47 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C90EC1CC29E422BB00006B47 /* PizzaCell.xib */,
+				C90EC1CF29E4235B00006B47 /* PizzaCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C90EC1D129E42C9200006B47 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C90EC1D229E42C9E00006B47 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C90EC1D229E42C9E00006B47 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C90EC1D329E42CBE00006B47 /* DrawerProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90EC1CD29E422BB00006B47 /* PizzaCell.xib in Resources */,
 				C90EC1A529E4146200006B47 /* LaunchScreen.storyboard in Resources */,
 				C90EC1A229E4146200006B47 /* Assets.xcassets in Resources */,
 				C90EC1A029E4145B00006B47 /* Main.storyboard in Resources */,
@@ -259,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90EC19D29E4145B00006B47 /* ViewController.swift in Sources */,
+				C90EC1D029E4235B00006B47 /* PizzaCell.swift in Sources */,
+				C90EC19D29E4145B00006B47 /* MainViewController.swift in Sources */,
 				C90EC19929E4145B00006B47 /* AppDelegate.swift in Sources */,
 				C90EC19B29E4145B00006B47 /* SceneDelegate.swift in Sources */,
+				C90EC1D429E42CBE00006B47 /* DrawerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

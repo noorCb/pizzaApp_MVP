@@ -6,4 +6,14 @@
 //  Copyright © 2023 Noor Cabrera Bel. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+internal protocol DrawerProtocol {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func drawCell(_ cell: UITableViewCell, withItem item: Any)
+}
+ 
+internal protocol DraweItemProtocol {
+    var cellDrawer: DrawerProtocol {get}
+}
+

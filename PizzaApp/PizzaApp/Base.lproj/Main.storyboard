@@ -7,21 +7,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PizzaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PizzaApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlk-X0-5lw">
-                                <rect key="frame" x="154" y="68" width="124" height="20.5"/>
+                                <rect key="frame" x="10" y="68" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-Tx-YDD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-Tx-YDD">
                                 <rect key="frame" x="25" y="96.5" width="364" height="750.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -29,16 +29,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ehf-Tx-YDD" firstAttribute="top" secondItem="nlk-X0-5lw" secondAttribute="bottom" constant="8" id="676-76-bl5"/>
-                            <constraint firstItem="ehf-Tx-YDD" firstAttribute="top" secondItem="nlk-X0-5lw" secondAttribute="bottom" constant="8" id="I0o-Ev-aWZ"/>
                             <constraint firstItem="ehf-Tx-YDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="M4z-ut-WTx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nlk-X0-5lw" secondAttribute="trailing" constant="136" id="NYS-SV-oWp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nlk-X0-5lw" secondAttribute="trailing" constant="10" id="NYS-SV-oWp"/>
                             <constraint firstItem="nlk-X0-5lw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="SqR-qI-fWO"/>
-                            <constraint firstItem="nlk-X0-5lw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="XKR-lu-9wT"/>
+                            <constraint firstItem="nlk-X0-5lw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="XKR-lu-9wT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehf-Tx-YDD" secondAttribute="trailing" constant="25" id="YE4-3p-Mhu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ehf-Tx-YDD" secondAttribute="bottom" constant="15" id="uKS-nv-0AX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pizzaTable" destination="ehf-Tx-YDD" id="9gj-gg-UDW"/>
+                        <outlet property="titleLabel" destination="nlk-X0-5lw" id="5cU-kK-W6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
